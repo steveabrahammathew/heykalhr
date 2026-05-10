@@ -11,7 +11,7 @@ body{
 
 header{
   background:#dbe7ff;
-  padding:15px 50px;
+  padding: 2px 50px;
 }
 
 nav{
@@ -22,7 +22,7 @@ nav{
 
 .logo{
   color:white;
-  font-size:24px;
+  font-size:10px;
   font-weight:700;
 }
 
@@ -36,9 +36,26 @@ nav ul li{
 }
 
 nav ul li a{
-  color:#0b1f3a;
+  color:#0d2a54;
   text-decoration:none;
   font-weight:500;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.nav-btn {
+    background-color: #0d2a54; 
+    color: white !important;   
+    padding: 8px 20px;         
+    border-radius: 4px;        
+    text-decoration: none;     
+    transition: 0.3s;          
+}
+
+.nav-btn:hover {
+    background-color: #1a3d7a; 
 }
 
 .hero{
@@ -203,7 +220,7 @@ form button{
   color:#0b1f3a;
 }
 .logo img{
-  height:60px;
+  height:110px;
   width:auto;
 }
 .about-profile{
