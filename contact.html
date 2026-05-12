@@ -6,7 +6,7 @@
   <title>Contact - Consultancy</title>
 
   <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -31,23 +31,101 @@
     <h1>Contact Us</h1>
   </section>
 
-  <section class="contact-section">
+ <section class="contact-wrapper">
 
-    <form>
+  <!-- LEFT SIDE -->
+  <div class="contact-info">
 
-      <input type="text" placeholder="Your Name" required>
+    <h2>Get in Touch</h2>
 
-      <input type="email" placeholder="Your Email" required>
+    <h3>
+      Human Resources & Leadership Consulting
+    </h3>
 
-      <textarea placeholder="Your Message" rows="6"></textarea>
+    <p>
+      Thank you for your interest in Heykal HR Consulting Services.
+      Whether you are looking to streamline your HR processes or
+      develop your leadership team, we look forward to connecting with you.
+    </p>
 
-      <button type="submit">
-        Send Message
-      </button>
+    <div class="contact-details">
 
-    </form>
+      <div class="contact-box">
 
-  </section>
+        <h4>Email</h4>
+
+        <p>
+          <a href="mailto:info@heykalhr.com" class="contact-link">info@heykalhr.com</a>
+        </p>
+
+      </div>
+<div class="contact-box">
+  <a href="https://wa.me/919150755947?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20consulting%20services." target="_blank" class="whatsapp-link">
+    <i class="fa-brands fa-whatsapp"></i>
+    Chat on WhatsApp
+  </a>
+</div>
+
+      <div class="contact-box">
+
+        <h4>LinkedIn</h4>
+
+        <p>
+          Add Your LinkedIn Profile Link
+        </p>
+
+      </div>
+
+      <div class="contact-box">
+
+        <h4>Location</h4>
+
+        <p>
+          Based in Surrey, BC | Serving Clients Across Canada
+        </p>
+
+      </div>
+
+      <div class="contact-box">
+
+        <h4>Response Time</h4>
+
+        <p>
+          Expect a response within 24–48 business hours.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE FORM -->
+  <div class="contact-form-box">
+
+  <form action="https://formsubmit.co/stevemathewa25@gmail.com" method="POST">
+
+  <input type="hidden" name="_captcha" value="false">
+
+  <input type="hidden" name="_subject" value="New Website Inquiry">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <input type="tel" name="phone" placeholder="Phone Number">
+
+  <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+
+  <button type="submit">
+    Send Message
+  </button>
+
+</form>
+
+  </div>
+
+</section>
 
 </body>
 </html>

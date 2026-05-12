@@ -8,7 +8,6 @@
   <title>Heykal HR Consulting Services</title>
 
   <link rel="stylesheet" href="./css/style.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,25 +16,24 @@
   <!-- HEADER -->
   <header>
 
-    <nav>
+  <nav>
+    <div class="logo">
+      <img src="images/Final Logo.png" alt="Logo"> </div>
 
-      <div class="logo">
-        <img src="images/Final Logo.png" alt="Logo">
-      </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="about.html">About</a></li>
-
-        <li><a href="services.html">Services</a></li>
-
-        <li><a href="testimonial.html">Testimonials</a></li>
-
-        <li><a href="contact.html" class="nav-btn">Contact</a></li>
-      </ul>
-
-    </nav>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="testimonial.html">Testimonials</a></li>
+      <li><a href="contact.html" class="nav-btn">Contact</a></li>
+    </ul>
+  </nav>
 
   </header>
 
@@ -45,12 +43,12 @@
     <div class="hero-content">
 
       <h1>
-        Helping Newcomers & Businesses Thrive in Canada
+        Strategic HR Solutions & Career Integration for the Canadian Market
       </h1>
 
       <p>
-        Professional HR consulting, newcomer settlement guidance,
-        and career coaching designed to help individuals and businesses
+        ​Professional HR consulting, newcomer settlement guidance, and career 
+        coaching designed to ensure individuals and businesses<br>
         grow with confidence.
       </p>
 
@@ -100,7 +98,7 @@
 
       <div class="home-about-image">
 
-        <img src="images/sheba thomas pic.jpeg" alt="Sheba Thomas">
+        <img src="images/sheba thomas pic 2.jpeg" alt="Sheba Thomas">
 
       </div>
 
@@ -118,7 +116,7 @@
     <div class="services-grid">
 
       <!-- SERVICE 1 -->
-      <div class="service-card-new">
+      <div class="service-card-new" href="services.html">
 
         <h2>Employer HR Solutions</h2>
 
@@ -130,7 +128,7 @@
       </div>
 
       <!-- SERVICE 2 -->
-      <div class="service-card-new">
+      <div class="service-card-new" href="services.html">
 
         <h2>60-Day Success Package</h2>
 
@@ -142,7 +140,7 @@
       </div>
 
       <!-- SERVICE 3 -->
-      <div class="service-card-new">
+      <div class="service-card-new" href="services.html">
 
         <h2>Career Coaching</h2>
 
@@ -153,6 +151,17 @@
 
       </div>
 
+      <!-- SERVICE 4 -->
+      <div class="service-card-new">
+
+        <h2>Elite Concierge</h2>
+
+        <p>
+          Covers expert hiring, specialized hospitality training, 
+          and clear rules for handling operations and tough customers.
+        </p>
+
+      </div>
     </div>
 
   </section>
@@ -182,6 +191,15 @@
     </p>
 
   </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu'); // Double check this ID matches your <ul>
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      console.log("Menu toggled!"); // This helps you check if the click is working
+    });
+  </script>
 
 </body>
 
