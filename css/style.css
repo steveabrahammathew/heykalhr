@@ -14,11 +14,7 @@ body{
 
 header{
   background:#ffffff;
-<<<<<<< HEAD
   padding:8px 50px;
-=======
-  padding:2px 50px;
->>>>>>> 905211d2a60784b56ef96ee135c0481fad1d5ff6
   box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -53,11 +49,7 @@ nav ul li a:hover {
     color: #8B1E3F;
 }
 
-<<<<<<< HEAD
 /* .nav-btn {
-=======
-.nav-btn {
->>>>>>> 905211d2a60784b56ef96ee135c0481fad1d5ff6
     background-color: #8B1E3F; 
     color: white;   
     padding: 8px 20px;         
@@ -68,7 +60,6 @@ nav ul li a:hover {
 
 .nav-btn:hover {
     background-color: #6f172f; 
-<<<<<<< HEAD
     color: white;
 } */
 
@@ -85,8 +76,6 @@ nav ul li a:hover {
   background-color: #0d2a54; /* Matches your nav link color */
   border-radius: 2px;
   transition: 0.3s;
-=======
->>>>>>> 905211d2a60784b56ef96ee135c0481fad1d5ff6
 }
 
 .hero{
@@ -274,7 +263,6 @@ form button{
   }
 }
 
-}
 .testimonial-section{
   display:flex;
   gap:30px;
@@ -917,7 +905,6 @@ form button{
 
 .contact-form-box button:hover{
   background:#6f172f;
-<<<<<<< HEAD
 }
 
 .whatsapp-link {
@@ -938,6 +925,4 @@ form button{
 .whatsapp-link:hover {
   color: #168f4a;
   transform: translateY(-1px);
-=======
->>>>>>> 905211d2a60784b56ef96ee135c0481fad1d5ff6
 }
