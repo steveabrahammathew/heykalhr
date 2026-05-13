@@ -24,11 +24,11 @@ nav{
   align-items:center;
 }
 
-.logo{
+/* .logo{
   color:white;
   font-size:10px;
   font-weight:700;
-}
+} */
 
 nav ul{
   display:flex;
@@ -217,12 +217,16 @@ form button{
     margin-top:15px;
   }
 
+  
   .hero-content h1{
-    font-size:40px;
+    font-size: 32px;        /* Keeping your mobile font size adjustment */
+    margin-bottom: 25px;
+    text-align: center;
   }
 
-  .services-section{
-    padding:40px 20px;
+  .service-card-new{
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   header {
@@ -261,6 +265,7 @@ form button{
     font-size: 32px;
     padding: 0 10px;
   }
+
 }
 
 .testimonial-section{
@@ -289,8 +294,8 @@ form button{
   color:#0b1f3a;
 }
 .logo img{
-  height:110px;
-  width:auto;
+  height:115px;
+  width: auto;
 }
 .about-profile{
   padding:80px 20px;
