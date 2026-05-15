@@ -723,24 +723,26 @@ form button{
 }
 
 .profile-main-card{
-  background:white;
-  padding:50px;
-  border-radius:20px;
-  box-shadow:0 5px 25px rgba(0,0,0,0.08);
-  margin-bottom:50px;
+  background: white;
+  padding: 5%; /* Changed from fixed 50px to percentage */
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  margin-bottom: 50px;
 
-  display:flex;
-  align-items:center;
-  gap:50px;
-  flex-wrap:wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content when it stacks */
+  gap: 30px; /* Reduced gap slightly for better fit */
+  flex-wrap: wrap;
 }
 
 .profile-main-card img{
-  width:320px;
-  height:420px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.15);
+  width: 320px;
+  max-width: 100%; /* Prevents the image from going outside the card */
+  height: auto; /* Changed from fixed 420px to auto to maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 .profile-main-card h1{
   color:#8B1E3F;
@@ -758,11 +760,10 @@ form button{
 }
 
 .profile-main-card p{
-  max-width:800px;
-  margin:auto;
-  line-height:1.9;
-  margin-bottom:20px;
-  color:#333;
+  max-width: 100%; /* Ensure it doesn't try to be wider than the container */
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .mission-vision-grid{
