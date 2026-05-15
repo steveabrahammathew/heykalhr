@@ -277,8 +277,8 @@ form button{
   nav ul {
     display: none; /* Hides the menu items by default */
     flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust based on your header height */
+    position:absolute;
+    top: 100px; /* Adjust based on your header height */
     left: 0;
     width: 100%;
     background: #ffffff;
@@ -293,7 +293,7 @@ form button{
   }
 
   nav ul li {
-    margin: 15px 0; /* Spacing between stacked links */
+    margin: 15px 10px; /* Spacing between stacked links */
   }
 
   /* Hero Section adjustments for mobile */
