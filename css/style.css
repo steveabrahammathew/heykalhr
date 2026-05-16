@@ -472,7 +472,9 @@ form button{
 }
 
 .service-card-new ul{
-  padding-left:20px;
+  list-style: none;     /* Removes the dots */
+  padding-left: 0;      /* Removes the left indentation */
+  padding: 0;
 }
 
 .service-card-new li{
@@ -539,6 +541,7 @@ form button{
   padding:80px 40px;
   max-width:1400px;
   margin:auto;
+  justify-content: center;
 }
 
 .testimonial-card-new{
@@ -842,7 +845,7 @@ form button{
 }
 .profile-content{
   flex:1;
-  min-width:300px;
+  min-width:100px;
 }
 
 .profile-content h1{
@@ -870,9 +873,10 @@ form button{
   margin:auto;
   padding:80px 20px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:50px;
   align-items:start;
+  justify-content: center;
 }
 
 .contact-info{
