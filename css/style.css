@@ -436,6 +436,15 @@ form button{
     font-size:32px;
   }
 
+.slide-card img{
+  width:170px;
+  height:170px;
+}
+
+.slide-card p{
+  font-size:15px;
+}
+
 }
 .services-grid{
   display:grid;
@@ -1069,4 +1078,49 @@ form button{
   line-height: 0;
   vertical-align: middle;
 
+}
+
+
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide-card {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+}
+
+.slide-card.active {
+  display: block;
+}
+
+.slide-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.slide-card h3 {
+  color: #8B1E3F;
+  margin-bottom: 12px;
+}
+
+.slide-card p {
+  max-width: 600px;
+  margin: auto;
+  color: #555;
+  line-height: 1.7;
 }

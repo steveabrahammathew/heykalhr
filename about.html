@@ -148,6 +148,58 @@
 
 </div>
 
+<div class="about-box">
+
+  <h2>Driven by Purpose & Values</h2>
+
+  <div class="slider">
+
+    <div class="slides">
+
+      <!-- SLIDE 1 -->
+      <div class="slide-card active">
+        <img src="/images/img 1.jpeg" alt="TWU Graduation">
+        <h3>TWU Graduation – Class of 2023</h3>
+        <p>
+          Celebrating success and new beginnings with colleagues at Trinity Western University, Langley campus.  
+          Honored to be a Master of Arts in Leadership graduate, Class of 2023.
+        </p>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="slide-card">
+        <img src="/images/img 3.jpeg" alt="Alumni Testimony">
+        <h3>Alumni Testimony – TWU Orientation</h3>
+        <p>
+          Sharing my journey as an alumnus at the Trinity Western University Langley campus orientation.  
+          A moment of reflection, growth, and giving back to the academic community.
+        </p>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="slide-card">
+        <img src="/images/img 5.jpg" alt="Academic Excellence">
+        <h3>Academic Excellence – MCC</h3>
+        <p>
+          Honored to be recognized as the Best Performer of the BBA 2011–2014 batch at Madras Christian College.  
+          A milestone that reflects dedication, consistency, and academic excellence.
+        </p>
+      </div>
+
+      <!-- SLIDE 4 (you can keep or remove if no image) -->
+      <div class="slide-card">
+        <img src="/images/img 6.jpg" alt="Value Award">
+        <h3>Value Award – 2025</h3>
+        <p>
+          Recipient of the 2025 Value Award for “Do What’s Right” at FirstService Residential, Canada.  
+          Recognition for integrity, professionalism, and ethical leadership.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
   <!-- EDUCATION -->
   <div class="about-box">
 
@@ -187,6 +239,27 @@
       console.log("Menu toggled!"); // This helps you check if the click is working
     });
   </script>
+
+  <script>
+  const slides = document.querySelectorAll(".slide-card");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // start
+  showSlide(currentSlide);
+
+  // change every 3 seconds
+  setInterval(nextSlide, 4500);
+</script>
 
 </body>
 </html>
