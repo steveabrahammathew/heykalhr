@@ -436,6 +436,19 @@ form button{
     font-size:32px;
   }
 
+  .slide-card img{
+    width: 100% !important; /* Added !important just in case base styles are fighting it */
+    height: auto !important;         /* Maintains the proper aspect ratio so it doesn't squish */
+    aspect-ratio: 1 / 1;  /* Forces a perfect square if that's the look you want */
+    object-fit: cover;    /* Ensures the image fills the space nicely without distortion */
+    margin: 0 auto 15px;
+  }
+
+  .slide-card p{
+    font-size:15px;
+    padding: 0 10px;
+  }
+
 }
 .services-grid{
   display:grid;
@@ -936,18 +949,18 @@ form button{
   font-family:'Poppins',sans-serif;
 }
 
-.contact-form-box button{
+.button-contact {
   background:#8B1E3F;
   color:white;
   border:none;
   padding:15px;
   border-radius:8px;
   cursor:pointer;
-  font-size:16px;
+  font-size:14px;
   transition:0.3s;
 }
 
-.contact-form-box button:hover{
+.button-contact:hover{
   background:#6f172f;
 }
 
@@ -1069,4 +1082,54 @@ form button{
   line-height: 0;
   vertical-align: middle;
 
+}
+
+
+
+.slider {
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide-card {
+  text-align: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  padding: 5px;
+  opacity: 0;
+  visibility: hidden;
+  height: 0; /* Prevents hidden cards from taking up vertical space */
+  overflow: hidden;
+}
+
+.slide-card.active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.slide-card img {
+  width: 30%;
+  height: 20%;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.slide-card h3 {
+  color: #8B1E3F;
+  margin-bottom: 12px;
+}
+
+.slide-card p {
+  max-width: 600px;
+  margin: auto;
+  color: #555;
+  line-height: 1.7;
 }
