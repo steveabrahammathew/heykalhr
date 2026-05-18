@@ -449,6 +449,18 @@ form button{
     padding: 0 10px;
   }
 
+  .thankyou-box{
+  padding:50px 25px;
+}
+
+.thankyou-box h1{
+  font-size:36px;
+}
+
+.thankyou-box p{
+  font-size:15px;
+}
+
 }
 .services-grid{
   display:grid;
@@ -1132,4 +1144,41 @@ form button{
   margin: auto;
   color: #555;
   line-height: 1.7;
+}
+
+.thankyou-section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  background:#f8f9fc;
+}
+
+.thankyou-box{
+  background:#ffffff;
+  max-width:650px;
+  width:100%;
+  padding:70px 50px;
+  text-align:center;
+  border-radius:18px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+  border-top:6px solid #8B1E3F;
+}
+
+.thankyou-box h1{
+  font-size:48px;
+  color:#8B1E3F;
+  margin-bottom:20px;
+}
+
+.thankyou-box p{
+  font-size:17px;
+  line-height:1.8;
+  color:#555;
+  margin-bottom:15px;
+}
+
+.thankyou-box .btn{
+  margin-top:25px;
 }

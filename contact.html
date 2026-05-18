@@ -150,12 +150,18 @@
   <!-- RIGHT SIDE FORM -->
   
 
-  <form action="https://formsubmit.co/info@heykalhr.com" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST">
 
-  <input type="hidden" name="_captcha" value="false">
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="4fc61a8b-3769-44b4-874a-b5a16a4e3957">
 
-  <input type="hidden" name="_subject" value="New Website Inquiry">
+  <!-- Optional Subject -->
+  <input type="hidden" name="subject" value="New Website Inquiry">
 
+  <!-- Redirect After Submit -->
+  <input type="hidden" name="redirect" value="https://heykalhr.com/thankyou.html">
+
+  <!-- Form Inputs -->
   <input type="text" name="name" placeholder="Your Name" required>
 
   <input type="email" name="email" placeholder="Your Email" required>
