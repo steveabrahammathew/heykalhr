@@ -1099,7 +1099,7 @@ form button{
 
 
 .slider {
-  width: auto;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
