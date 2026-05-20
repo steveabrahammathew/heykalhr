@@ -17,8 +17,9 @@
   <header>
 
   <nav>
-    <div class="logo">
-      <img src="images/Final Logo 1.png" alt="Logo"> </div>
+    <a href="index.html" class="logo">
+  <img src="images/Final Logo 1.png" alt="Logo">
+</a>
 
     <div class="hamburger" id="hamburger">
       <span></span>
@@ -187,7 +188,7 @@
       Let’s work together to build your future with confidence.
     </p>
 
-    <a href="contact.html" class="btn">
+    <a href="contact.html" class="btn ">
       Get In Touch
     </a>
 
@@ -201,15 +202,15 @@
     </p>
 
   </footer>
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu'); // Double check this ID matches your <ul>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      console.log("Menu toggled!"); // This helps you check if the click is working
-    });
-  </script>
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+</script>
 
 </body>
 
