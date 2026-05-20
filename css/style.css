@@ -16,6 +16,17 @@ header{
   background:#ffffff;
   padding:10px 50px;
   box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(139, 30, 63, 0.12); /* maroon tint */
+
+  transition: all 0.3s ease;
 }
 
 nav{
