@@ -1251,108 +1251,344 @@ nav ul li a {
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* PARTNER CARD */
-.partner-card-section {
-  padding: 80px 8%;
+
+/* ==========================================
+   COMPACT HANGING ADVERTISEMENT CARD
+   ========================================== */
+
+.partner-ad-section {
+  padding: 60px 5% 40px 5%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Prevents the swinging animation from causing horizontal scrollbars */
 }
 
-.partner-card {
+/* Container handling the pivot point for the sway animation */
+.hanging-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* Reduced max-width for a more compact card appearance */
+  margin: 0 auto;
+  padding-top: 50px; /* Space for the ropes */
+  transform-origin: top center;
+  animation: swaySign 4.5s ease-in-out infinite alternate;
+}
+
+/* CSS Drawn Hanging Ropes */
+.hang-rope {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 55px; /* Shorter ropes to match compact size */
+  background: linear-gradient(to bottom, #b8860b, #ffd700, #8a6d3b);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Ropes precisely anchored to match the smaller footprint */
+.rope-left {
+  left: 20%;
+  transform: rotate(-20deg);
+  transform-origin: top center;
+}
+
+.rope-right {
+  right: 20%;
+  transform: rotate(20deg);
+  transform-origin: top center;
+}
+
+/* Compact Premium Card Base */
+.partner-ad-card {
   display: flex;
   align-items: center;
-  gap: 40px;
-
-background: #eef3f8;
-border-left: 5px solid #8B1E3F;
-  border-radius: 24px;
-  padding: 40px;
-
-  box-shadow:
-    0 10px 40px rgba(0,0,0,0.08);
-
-  border: 1px solid rgba(0,0,0,0.06);
-
-  max-width: 1100px;
-  margin: auto;
+  gap: 30px; /* Smaller gap */
+  background: linear-gradient(135deg, #2b1118 0%, #15050a 100%);
+  border-radius: 16px;
+  padding: 30px; /* Shrunk padding from 45px to 30px */
+  position: relative;
+  
+  /* Gold Metallic Frame Effect */
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: 
+    linear-gradient(135deg, #2b1118 0%, #15050a 100%), 
+    linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+  
+  box-shadow: 
+    0 15px 35px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(191, 149, 63, 0.15);
 }
 
-.partner-image img {
-  width: 280px;
-  height: 320px;
+/* Compact Profile Picture with Gold Ring */
+.partner-ad-image-container {
+  flex-shrink: 0;
+}
+
+.partner-ad-image {
+  width: 170px; /* Compact image container */
+  height: 170px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.partner-ad-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-
-  border-radius: 20px;
+  border-radius: 50%;
 }
 
-.partner-content {
+/* Compact Typography and Content */
+.partner-ad-content {
   flex: 1;
+  color: #f5f5f5;
 }
 
-.partner-label {
+.partner-ad-label {
   display: inline-block;
-  margin-bottom: 14px;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  margin-bottom: 6px;
+  font-size: 0.75rem; /* Shrunk text */
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #0b2e6b;
+  color: #dfba6b;
 }
 
-.partner-content h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #8B1E3F;
+.partner-ad-name {
+  font-size: 1.6rem; /* Shrunk title text */
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-.partner-role {
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #555;
+.partner-ad-name small {
+  font-size: 0.6em; /* Scale it down to 60% of the main name's size */
+  font-weight: 400;  /* Make it slightly thinner so it looks secondary */
+  opacity: 0.85;     /* Soften the color slightly */
 }
 
-.partner-description {
-  margin-top: 20px;
-  line-height: 1.8;
-  color: #444;
+.partner-ad-role {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #dfba6b;
+  margin-bottom: 2px;
 }
 
-.partner-email {
-  display: inline-block;
-  margin-top: 20px;
-
-  color: #8B1E3F;
-  font-weight: 600;
-  text-decoration: none;
-
-  transition: 0.3s ease;
-}
-
-.partner-email:hover {
-  opacity: 0.7;
-}
-
-.partner-note {
-  margin-top: 24px;
-
+.partner-ad-firm {
   font-size: 0.85rem;
-  line-height: 1.7;
-
-  color: #777;
+  color: #cccccc;
+  line-height: 1.4;
+  margin-bottom: 12px;
 }
 
-/* MOBILE */
+.partner-ad-description {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #d1d1d1;
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   DYNAMIC CONTACT ICONS & TRANSITIONS
+   ========================================== */
+
+/* Wrapper setup */
+.partner-ad-actions {
+  display: flex;
+  justify-content: flex-start; /* Desktop default alignment */
+  align-items: center;
+  position: relative;
+  min-height: 42px; /* Prevents card layout layout shift when button vanishes */
+  width: 100%;
+}
+
+/* Base state for the button transition */
+.partner-ad-btn {
+  display: inline-block;
+  padding: 10px 24px; /* Shrunk padding */
+  background: linear-gradient(135deg, #bf953f 0%, #b38728 100%);
+  color: #15050a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(179, 135, 40, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.partner-ad-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(252, 246, 186, 0.5);
+  background: linear-gradient(135deg, #fcf6ba 0%, #bf953f 100%);
+}
+
+/* Class to hide the button via JS */
+.partner-ad-btn.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  position: absolute; /* Takes up no space once hidden */
+}
+
+/* Icons container styling (Hidden by default) */
+.partner-contact-icons {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s; /* Slight delay for smooth flow */
+}
+
+/* Class to reveal the icons via JS */
+.partner-contact-icons.is-visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* Premium Round Icon Buttons */
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #15050a; /* Dark icon color */
+  background: linear-gradient(135deg, #bf953f 0%, #b38728 100%);
+  box-shadow: 0 4px 12px rgba(179, 135, 40, 0.3);
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(252, 246, 186, 0.5);
+  background: linear-gradient(135deg, #fcf6ba 0%, #bf953f 100%);
+}
+
+/* Disclaimer text */
+.partner-ad-note {
+  max-width: 700px;
+  margin-top: 25px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #888888;
+  text-align: center;
+}
+
+/* Gentle Sway Animation */
+@keyframes swaySign {
+  0% { transform: rotate(-1.5deg); }
+  100% { transform: rotate(1.5deg); }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (PRESERVING SIDE-BY-SIDE DESIGN)
+   ========================================== */
+
 @media (max-width: 768px) {
-
-  .partner-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
+  .hanging-container {
+    padding-top: 35px; /* Compacts rope spacing area */
   }
 
-  .partner-image img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
+  /* Keeps ropes correctly relative to the card's outer anchor paths */
+  .rope-left {
+    left: 20%;
+    transform: rotate(-20deg);
+  }
+  
+  .rope-right {
+    right: 20%;
+    transform: rotate(20deg);
   }
 
+  /* Retains horizontal side-by-side spacing while safely squeezing dimensions down */
+  .partner-ad-card {
+    display: flex !important;
+    flex-direction: row !important; /* Preserves layout alignment */
+    align-items: center !important;
+    text-align: left !important;
+    padding: 15px !important; /* Prevents overflow clipping */
+    gap: 15px !important;
+  }
+
+  /* Scale structural profile component down proportionally */
+  .partner-ad-image {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  /* Scales layout text clusters cleanly */
+  .partner-ad-content {
+    display: block !important;
+    width: auto !important;
+    text-align: left !important;
+  }
+
+  .partner-ad-name {
+    font-size: 0.90rem !important;
+  }
+
+  .partner-ad-label {
+    font-size: 0.65rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .partner-ad-role,
+  .partner-ad-firm {
+    font-size: 0.75rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .partner-ad-description {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Preserves regular side-by-side action-button parameters */
+  .partner-ad-actions {
+    display: flex !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    margin-top: 5px !important;
+    position: relative !important;
+  }
+  
+  .partner-contact-icons {
+    justify-content: flex-start !important;
+    width: auto !important;
+  }
+
+  .partner-ad-btn {
+    padding: 6px 8px !important;
+    font-size: 0.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-ad-card {
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+
+  .partner-ad-image {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  /* Hides long description string specifically on tiny devices to safeguard UI margins */
+  .partner-ad-description {
+    display: none !important;
+  }
 }

@@ -172,7 +172,7 @@
 
   </section>
 
-  <!-- REAL ESTATE PARTNER -->
+  <!-- REAL ESTATE PARTNER
 <section class="partner-card-section">
 
   <div class="partner-card">
@@ -220,8 +220,52 @@
 
   </div>
 
-</section>
+</section> -->
 
+<section class="partner-ad-section">
+  <div class="hanging-container">
+    <div class="hang-rope rope-left"></div>
+    <div class="hang-rope rope-right"></div>
+
+    <div class="partner-ad-card">
+      <div class="partner-ad-image-container">
+        <div class="partner-ad-image">
+          <img src="./images/Kurian.jpeg" alt="Sheeba Kurian">
+        </div>
+      </div>
+
+      <div class="partner-ad-content">
+        <span class="partner-ad-label">Our Exclusive Real Estate Partner</span>
+        <h2 class="partner-ad-name">Sheeba Kurian, <small>PREC*</small></h2>
+        <p class="partner-ad-role">Personal Real Estate Corporation</p>
+        <p class="partner-ad-firm">Royal Pacific Realty Ltd.<br>West Vancouver, BC</p>
+        <p class="partner-ad-description">
+          For buying or selling a home, contact our preferred licensed professional for expert real estate guidance.
+        </p>
+        <div class="partner-ad-actions">
+          <a href="#" class="partner-ad-btn" id="connectBtn">Connect Now</a>
+
+          <div class="partner-contact-icons" id="contactIcons">
+            <a href="mailto:sheebarealtor@gmail.com" class="icon-link email-icon" title="Email Sheeba">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+            <a href="tel:+11234567890" class="icon-link call-icon" title="Call Sheeba">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="partner-ad-note">
+    *Real estate trading services are provided exclusively through Sheeba Kurian Personal Real Estate Corporation and are completely independent of Heykal Consulting.
+  </p>
+</section>
   <!-- CTA SECTION -->
   <br><section class="cta-section">
 
@@ -257,6 +301,19 @@
       navMenu.classList.toggle('active');
     });
   </script>
+
+  <script>
+  document.getElementById('connectBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevents default link jump action
+    
+    const button = document.getElementById('connectBtn');
+    const icons = document.getElementById('contactIcons');
+    
+    // Switch visibility classes
+    button.classList.add('is-hidden');
+    icons.classList.add('is-visible');
+  });
+</script>
 
 </body>
 
