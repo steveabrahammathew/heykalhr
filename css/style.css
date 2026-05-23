@@ -1591,4 +1591,9 @@ nav ul li a {
   .partner-ad-description {
     display: none !important;
   }
+
+  .partner-ad-btn {
+    padding: 6px 8px !important;
+    font-size: 0.3rem !important;
+  }
 }
