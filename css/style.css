@@ -14,18 +14,15 @@ body{
 
 header{
   background:#ffffff;
-  padding:10px 50px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  padding:15px 20px;
+  box-shadow:0px 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 9999;
-
   background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   border-bottom: 1px solid rgba(139, 30, 63, 0.12); /* maroon tint */
-
   transition: all 0.3s ease;
 }
 
@@ -530,6 +527,7 @@ nav ul li a {
 
 .service-card-new:hover{
   transform:translateY(-10px);
+  
 }
 
 .service-card-new h2{
@@ -741,7 +739,7 @@ nav ul li a {
   background:#8B1E3F;
   color:white;
   text-align:center;
-  padding:100px 20px;
+  padding:70px 20px;
 }
 
 .cta-section h2{
@@ -757,6 +755,7 @@ nav ul li a {
 .testimonial-card-new:hover{
   transform:translateY(-10px);
   box-shadow:0 10px 30px rgba(11,46,107,0.15);
+  border-left: #0b1f3a;
 }
 
   footer{
@@ -1596,4 +1595,318 @@ nav ul li a {
     padding: 6px 8px !important;
     font-size: 1.0rem !important;
   } */
+}
+
+/* career page */
+/* --- Glowing Border Accordion Styles --- */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --brand-maroon: #801638;
+  --brand-blue: #0b2545;
+  --glow-purple: #7a229c; /* Accent glow from your image sample */
+  --dark-bg: #1e1e24;     /* Dark interface background from image sample */
+  --border-gray: #3f3f46;
+}
+
+.careers-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.careers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #111827;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.accenture-style-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- The Moving Light Loop Wrapper Setup --- */
+.glowing-card-wrapper {
+  position: relative;
+  background: var(--dark-bg);
+  border-radius: 14px;
+  padding: 3px; /* Size of the glowing border line track */
+  z-index: 1;
+  transition: box-shadow 0.4s ease;
+}
+
+/* Moving Light Gradient Border */
+.glowing-card-wrapper::before,
+.glowing-card-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--brand-maroon),
+    var(--glow-purple),
+    var(--brand-blue),
+    var(--glow-purple),
+    var(--brand-maroon)
+  );
+  animation: rotationLoop 6s linear infinite;
+}
+
+/* Soft ambient glow behind the card */
+.glowing-card-wrapper::after {
+  filter: blur(15px);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+/* Elevate the light effect when active/expanded */
+.glowing-card-wrapper.card-expanded::after,
+.glowing-card-wrapper:hover::after {
+  opacity: 0.8;
+}
+
+/* Keyframes to make the light travel around the card perimeter */
+@keyframes rotationLoop {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
+
+/* --- Internal Accordion Layout --- */
+.job-accordion-item {
+  background-color: var(--dark-bg);
+  border-radius: 11px;
+  overflow: hidden;
+  color: #f4f4f5;
+}
+
+.job-header-row {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  padding: 35px 30px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.job-title {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.job-sub-meta {
+  font-size: 0.95rem;
+  color: #a1a1aa;
+  margin: 0 0 6px 0;
+}
+
+.job-quick-skill {
+  font-size: 0.95rem;
+  color: #e4e4e7;
+  margin: 0 0 14px 0;
+  font-weight: 600;
+}
+
+.job-quick-skill .highlight-text {
+  color: #e2e8f0;
+  text-decoration: underline;
+}
+
+.job-brief-desc {
+  font-size: 0.95rem;
+  color: #d4d4d8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Right Side Actions Block --- */
+.job-right-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.save-job-btn {
+  background: transparent;
+  border: none;
+  color: #e4e4e7;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+
+.save-job-btn:hover {
+  color: var(--brand-maroon);
+}
+
+.save-job-btn svg {
+  color: inherit;
+}
+
+/* Rounded Capsule Action Toggle Button */
+.job-toggle-btn {
+  background-color: var(--brand-maroon);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(128, 22, 56, 0.3);
+}
+
+.glowing-card-wrapper:hover .job-toggle-btn {
+  background-color: #9a1f47;
+}
+
+.job-accordion-item.active .job-toggle-btn {
+  background-color: var(--brand-blue);
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.4);
+}
+
+/* --- Expandable Drop Panel Content --- */
+.job-content-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #18181b; /* Darker interior panel contrast */
+}
+
+.job-accordion-item.active .job-content-panel {
+  max-height: 1500px;
+}
+
+.panel-inner-content {
+  padding: 40px 30px;
+  border-top: 1px solid #27272a;
+}
+
+.job-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.details-column h4 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.details-column h4:not(:first-child) {
+  margin-top: 30px;
+}
+
+.details-column p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  margin: 0 0 15px 0;
+}
+
+.details-column ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.details-column ul li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  margin-bottom: 12px;
+}
+
+/* Panel Bottom Action Bar */
+.panel-footer {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #27272a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-disclaimer {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  font-style: italic;
+  margin: 0;
+  max-width: 70%;
+}
+
+.btn-apply-accenture {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 14px 32px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-apply-accenture:hover {
+  background-color: #e4e4e7;
+  transform: scale(1.02);
+}
+
+/* --- Responsive Viewports Breakpoints --- */
+@media (max-width: 992px) {
+  .job-header-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .job-right-actions {
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-details-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .panel-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .footer-disclaimer {
+    max-width: 100%;
+  }
+  .btn-apply-accenture {
+    width: 100%;
+    text-align: center;
+  }
 }
